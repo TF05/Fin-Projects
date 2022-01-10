@@ -1,0 +1,34 @@
+---
+title: "Portfolio CAPM and Sharpe Ratio Analysis Documentation"
+author: "Yaseen Chirathodi"
+date: "09/01/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Model Description
+  - This model is to help users generate a portfolio based on their client risk and personal preferences. This financial model is able to extract any current and 5-year historic data of stocks, index and treasury yield data using Yahoo Finance and Federal Reserve APIs. With the information given above, it is used to calculate the systemic risk of the portfolio (CAPM Beta) using portfolio returns against the relevant index to see if it matches the client’s risk preference. It can also be able to calculate Jensen’s Alpha which is used to determine the performance of the portfolio against its benchmark index. Lastly, the model can construct the annual Sharpe Ratio of the portfolio using its returns and the risk-free rate to establish whether the portfolio is generating enough reward over a unit of risk. With these three measures, the user can advise a client which stocks suite their preferences with quantitative evidence. 
+
+Assumptions
+  - User has some experience with using API's
+  - User has some experience using R
+  - Stock and Index Tickers are listed on Yahoo Finance
+  - T-bill Yield rates are listed on Federal Reserve API's
+  - Return averages are calculated arithmetically, not geometrically
+  - The model uses monthly data
+  - The model does not rebalance the portfolio 
+
+Model Instructions
+  - The user should choose stocks that goes along with their preferences and choose the relevant index
+  - Under the "ticker" variable, input the stock ticker symbols that the user have chosen
+  - Under the "w" variable, assign the weight for the stocks in portfolio, the weights should be in order of the "ticker" variable
+  - Under the "index_ticker" variable, choose the relevant index tickers
+  - Under the "t_bill" variable, choose the relevant t_bill, the default is the 90-day T-Bill
+  - The user should now be able to run the code and see the results on the console and the results are stored on the global environment
+  
+  
+  
+  
